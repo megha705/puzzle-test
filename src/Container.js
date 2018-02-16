@@ -72,15 +72,23 @@ export default class Container extends Component {
 
 	componentWillReceiveProps(nextProps) {
 		if(this.props.cards !== nextProps.cards){
-			this.setState({ cards: nextProps.cards })
+			console.log('1111111');
+			this.setState({ cards: nextProps.cards });
 		}
 	}
 
 	checkSorted() {
 		const {cards} = this.state;
-		const sorting = cards.map((tile, index) => {
-			tile.id !== index+1 ? isSorted = false : isSorted = true;
-		});
+		for (let i = 0; i < cards.length; i++) {
+			if(cards[i].id !== i+1){
+				isSorted = false;
+				break;
+			} else {
+				debugger
+				isSorted = true;
+				continue;
+			}
+		};
 		return isSorted;
 	}
 

@@ -19,7 +19,7 @@ class Puzzle extends Component {
     this.setState({ gridValue: e.target.value, cards: [] });
   }
 
-  generateCards(){
+  async generateCards(){
     const { gridValue } = this.state;
     let squares = gridValue * gridValue;
     let cards = [];
@@ -32,7 +32,7 @@ class Puzzle extends Component {
     for(var i=0; i < squares; i++){
       cards.push({id: random[i], text: random[i]});
     }
-    this.setState({cards});
+    await this.setState({cards});
   }
 
   render() {
