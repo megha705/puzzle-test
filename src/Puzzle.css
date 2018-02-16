@@ -1,0 +1,36 @@
+.grid {
+  width: 300px;
+}
+
+.box {
+  background: orange;
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  float: left;
+}
+
+.test{
+	min-width: 25%;
+	    display: inline-block;
+}
+
+.tile{
+	border: 1px dashed #000;
+	padding: 0.5rem 1rem;
+	margin-bottom: .5rem;
+	background-color: #ffc7c7;
+	cursor: move;
+	
+}
+.tile.success {
+	 
+	background-color: #b5ffe4;
+	border-color: #b5ffe4;
+	 
+	
+}
+.container {
+	max-width: 80%;
+	margin: 25px auto;
+}
