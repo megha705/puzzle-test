@@ -49,7 +49,7 @@ class Puzzle extends Component {
           margin="normal"
         />
         <br/>
-        <Button disabled={gridValue && gridValue > 1 ? false : true} variant="raised" color="primary" onClick={this.generateCards}>generateCards</Button>
+        <Button disabled={gridValue && gridValue > 1 ? false : true} variant="raised" color="primary" onClick={this.generateCards}>Generate Puzzle</Button>
         {gridValue && gridValue > 0 && <Container gridValue={gridValue}  cards={cards}/>}
       </div>
     );

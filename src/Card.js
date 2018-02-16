@@ -65,7 +65,6 @@ export default class Card extends Component {
 		} = this.props
 		const opacity = isDragging ? 0 : 1;
 		const isSorted = checkSorted();
-		console.log('2222222', isSorted);
 
 		return connectDragSource(
 			connectDropTarget(<div className={isSorted ? "tile success" : "tile"}>{text}</div>),
